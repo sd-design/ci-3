@@ -17,7 +17,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <h4 class="display-4 text-secondary"><?=$title;?></h4>
 
             </div>
+            <div class="col-sm-12">
+            <div class="col-6"><?=$calendar;?></div>
         </div>
+        <div class="row">
+        <?php if($switchCal == TRUE){ ?>
+
+            <?php
+            foreach($calendarYear as $month):
+?>
+<div class="col-sm-3"><div class="shadow m-2 p-2 border" style="height:95%;"><?=$month;?></div></div>
+<?php
+            endforeach;
+        }
+        ?>
+        </div>
+    </div>
 
     </div>
 </body>
