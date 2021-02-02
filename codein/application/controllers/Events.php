@@ -37,11 +37,11 @@ class Events extends CI_Controller {
         {cal_cell_start_today}<td>{/cal_cell_start_today}
         {cal_cell_start_other}<td class="other-month">{/cal_cell_start_other}
 
-        {cal_cell_content}<a href="{content}" target="_blank">{day}</a>{/cal_cell_content}
-        {cal_cell_content_today}<div class="highlight"><a href="{content}">{day}</a></div>{/cal_cell_content_today}
+        {cal_cell_content}<div class="highlight text-center bg-info gray-100"><a href="{content}" target="_blank" class="text-white stretched-link">{day}</a></div>{/cal_cell_content}
+        {cal_cell_content_today}<div class="highlight text-center bg-info gray-100"><a href="{content}" class="text-white stretched-link">{day}</a></div>{/cal_cell_content_today}
 
         {cal_cell_no_content}{day}{/cal_cell_no_content}
-        {cal_cell_no_content_today}<div class="highlight">{day}</div>{/cal_cell_no_content_today}
+        {cal_cell_no_content_today}<div class="highlight text-center bg-light gray-100">{day}</div>{/cal_cell_no_content_today}
 
         {cal_cell_blank}&nbsp;{/cal_cell_blank}
 
@@ -77,10 +77,10 @@ class Events extends CI_Controller {
         $data['calendar'] = $this->calendar->generate($year, $month);
         $this->load->view('events', $data);
     }
-    public function day(int $year = null, int $month = null, int $day = null)
+    public function day(int $year = null, string $month = null, string $day = null)
     {
         $dataCal = array(
-        $day  => '/events/'.$year.'/'.$month.'/'.$day
+        intval($day)  => '/events/'.$year.'/'.$month.'/'.$day
         );
         $data['switchCal'] = FALSE;
         $data['calendar'] = $this->calendar->generate($year, $month, $dataCal);

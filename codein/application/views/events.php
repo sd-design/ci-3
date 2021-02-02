@@ -14,8 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="container pt-5">
         <div class="row">
             <div class="col-sm-11">
-                <h4 class="display-4 text-secondary"><?=$title;?></h4>
-
+                <h4 class="display-4 text-secondary pb-3"><?=$title;?></h4>
             </div>
             <div class="col-sm-12">
             <div class="col-6"><?=$calendar;?></div>
@@ -26,7 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <?php
             foreach($calendarYear as $month):
 ?>
-<div class="col-sm-3"><div class="shadow m-2 p-2 border" style="height:95%;"><?=$month;?></div></div>
+<div class="col-sm-3 mb-3"><div class="shadow mr-2 ml-2 p-2 border" style="height:95%;"><?=$month;?></div></div>
 <?php
             endforeach;
         }
