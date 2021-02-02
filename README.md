@@ -1,2 +1,3 @@
-# ci-3
-Codeigniter 3 snippets
+# Codeigniter 3 snippets
+Этот репозиторий содержит наработки на фреймворке Codeigniter 3
+

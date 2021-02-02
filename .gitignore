@@ -1,3 +1,9 @@
+.DS_Store
+.htaccess
+codein/application/config/config.php
+codein/application/config/database.php
+grafika/
+
 */config/development
 */logs/log-*.php
 !*/logs/index.html
