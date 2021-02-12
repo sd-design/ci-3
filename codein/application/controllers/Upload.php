@@ -78,7 +78,7 @@ class Upload extends CI_Controller {
      
         }
         foreach($data['totalFiles'] as $file){
-            echo '<img src="/uploads/'.$file['name'].'" style="height: 150px;
+            echo '<img src="'.base_url().'uploads/'.$file['name'].'" style="height: 150px;
             width: auto;
             display: inline-block;margin-right:10px" />';
 
