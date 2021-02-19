@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Fun{
     public $name;
     function __construct($name){
-        $this->name = $name;
+        $this->name = $name['name1'];
     }
     public function hello(){
         $hello = "Hello ".$this->name;
@@ -14,7 +14,7 @@ class Fun{
 class Test extends CI_Controller {
 
      function __construct(){
-         $this->setName = new Fun('Sergey');
+         $this->setName = new Fun(array('name1'=>'Sergey'));
      }
 
      public function index(){
