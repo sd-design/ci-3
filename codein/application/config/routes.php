@@ -54,5 +54,6 @@ $route['events/(:any)'] = "events/year/$1";
 $route['events/(:any)/(:any)'] = "events/month/$1/$2";
 $route['events/(:any)/(:any)/(:any)'] = "events/day/$1/$2/$3";
 $route['calendar/(:any)/(:any)'] = "home/calendar/$1/$2";
+$route['admin'] = 'admin/dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

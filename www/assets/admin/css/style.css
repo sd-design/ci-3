@@ -1,0 +1,34 @@
+*#dashboard h1, h2, h3, h4, h5, h6{color:#779db3;}
+*#slider h1, h2, h3, h4, h5, h6{color:#779db3;}
+#dashboard .col-sm-4{margin-bottom:25px;}
+#slider .card.bg_transp .card-img{opacity:0.5;}
+.box {background-color: #92c7ff; padding: 1.35rem 1.25rem;}
+.inputfile + label svg {width: 1em;height: 1em;vertical-align: middle; fill: currentColor; margin-top: -0.25em;margin-right: 0.25em;}
+.inputfile {width: 100%; height: 100%; opacity: 0; overflow: hidden; position: absolute; z-index: 0;}
+.inputfile + label {
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+.inputfile:hover{cursor: pointer;}
+.inputfile-4 + label {color: #fff6fe;text-align: center;}
+.inputfile-4 + label svg { width: 100%; height: 100%; fill: #fff;}
+.inputfile-4:focus + label, .inputfile-4.has-focus + label, .inputfile-4 + label:hover {color: #fff6fe;}
+.inputfile-4 + label figure {width: 100px;  height: 100px; border-radius: 50%; background-color: #3e51d3; display: block; padding: 20px; margin: 0 auto; }
+.change_image:hover > img{opacity:0.67}
+.ogi_img_admin{width:100%;}
+.btn_switch_slider{padding: 4px;}
+.btn_switch_slider:hover{cursor: pointer; border: 1px solid #e1e1e8;padding: 3px;-webkit-box-shadow: 0px 1px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 1px 8px 0px rgba(34, 60, 80, 0.2); box-shadow: 0px 1px 8px 0px rgba(34, 60, 80, 0.2);}
+.order_info h5{color: #13aec4}
+.order_info p, .order_info div{font-weight: 600;color: #1e85a6;}
+.order_info .descript{font-weight: 400;color: #c1c1c9;}
+.order_info .order_note{padding:7px 11px;background: #0000000d;background-color: rgba(0,0,0,.05); border-radius: 5px;font-weight: 400;}
+.order_comment{padding: 7px 11px; background: #0000000d; background-color: rgba(0,0,0,.05);}
+.input-group-text{background-color:#e1f0ff;}
