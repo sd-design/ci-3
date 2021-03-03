@@ -10,56 +10,22 @@ class Events extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Funs');
+        $this->load->model('Funs', 'fun');
         $prefs = array(
             'start_day'    => 'monday',
             'month_type'   => 'long',
             'day_type'     => 'abr'
         );
-        $prefs['template'] = '
-
-        {table_open}<table class="table table-sm">{/table_open}
-
-        {heading_row_start}<thead class="table-light"><tr>{/heading_row_start}
-
-        {heading_previous_cell}<th><a href="{previous_url}">&lt;&lt;</a></th>{/heading_previous_cell}
-        {heading_title_cell}<th colspan="{colspan}">{heading}</th>{/heading_title_cell}
-        {heading_next_cell}<th><a href="{next_url}">&gt;&gt;</a></th>{/heading_next_cell}
-
-        {heading_row_end}</tr></thead>{/heading_row_end}
-
-        {week_row_start}<tr>{/week_row_start}
-        {week_day_cell}<td class="text-center">{week_day}</td>{/week_day_cell}
-        {week_row_end}</tr>{/week_row_end}
-
-        {cal_row_start}<tr>{/cal_row_start}
-        {cal_cell_start}<td class="border text-center">{/cal_cell_start}
-        {cal_cell_start_today}<td>{/cal_cell_start_today}
-        {cal_cell_start_other}<td class="other-month">{/cal_cell_start_other}
-
-        {cal_cell_content}<div class="highlight text-center bg-info gray-100"><a href="{content}" target="_blank" class="text-white stretched-link">{day}</a></div>{/cal_cell_content}
-        {cal_cell_content_today}<div class="highlight text-center bg-info gray-100"><a href="{content}" class="text-white stretched-link">{day}</a></div>{/cal_cell_content_today}
-
-        {cal_cell_no_content}{day}{/cal_cell_no_content}
-        {cal_cell_no_content_today}<div class="highlight text-center bg-light gray-100">{day}</div>{/cal_cell_no_content_today}
-
-        {cal_cell_blank}&nbsp;{/cal_cell_blank}
-
-        {cal_cell_other}{day}{/cal_cel_other}
-
-        {cal_cell_end}</td>{/cal_cell_end}
-        {cal_cell_end_today}</td>{/cal_cell_end_today}
-        {cal_cell_end_other}</td>{/cal_cell_end_other}
-        {cal_row_end}</tr>{/cal_row_end}
-
-        {table_close}</table>{/table_close}
-';
+        $prefs['template'] = $this->fun->prefCalendar();
 
         $this->load->library('calendar', $prefs);
     }
-	public function index()
+	public function index($year =2021)
 	{
+        $data['switchCal'] = TRUE;
+        $data['calendar'] = '';
 		$data['title'] = "Events Index";
+        $data['calendarYear'] = $this->getYear($year);
         $this->load->view('events', $data);
 	}
     public function year(int $year = null)
