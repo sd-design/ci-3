@@ -1,49 +1,49 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="description" content="deholdingstore.de"><title>Add new product : Kundenmenü | Deholdingstore</title>
+?><!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="description" content="deholdingstore.de"><title><?=lang('title_new_product');?> : <?=lang('dashboard_title');?> | <?=lang('company_name');?></title>
 <link href="<?php echo base_url();?>assets/admin/css/bootstrap.min.css" rel="stylesheet"><link href="<?php echo base_url();?>assets/admin/css/style.css" rel="stylesheet">
 </head>
 <body id="dashboard">
   <div class="container">
     <div class="mt-3 mb-3">
-      <h1 class="display-4">Add new product</h1>
-        <h6>Kundenmenü | Deholdingstore</h6>
-      <div class="text-right"><a href="<?php echo base_url();?>admin/dashboard" class="btn btn-sm btn-success">Dashboard</a>&nbsp;<a href="<?php echo base_url();?>admin/login/out" class="btn btn-sm btn-danger">Logout</a></div>
+      <h1 class="display-4"><?=lang('title_new_product');?></h1>
+        <h6><?=lang('dashboard_title');?> | <?=lang('company_name');?></h6>
+      <div class="text-right"><a href="<?php echo base_url();?>admin/dashboard" class="btn btn-sm btn-success"><?=lang('btn_dashboard');?></a>&nbsp;<a href="<?php echo base_url();?>admin/login/out" class="btn btn-sm btn-danger"><?=lang('btn_logout');?></a></div>
     </div>
 <hr>
       <div class="row">
           <div class="col-sm-6">
             <?php echo form_open('/admin/products/save', 'id="product-form"');?>
       <div class="form-group">
-      <label for="exampleInputEmail1">Title of product</label>
+      <label for="exampleInputEmail1"><?=lang('title_product');?></label>
       <input type="text" class="form-control" name="title" id="product_title" aria-describedby="emailHelp" required>
       <small id="emailHelp" class="form-text text-muted">Name of Product in category part.</small>
     </div>
  <div class="form-group">
-                  <label for="exampleFormControlSelect1">Select of product type</label>
+                  <label for="exampleFormControlSelect1"><?=lang('select_type_product');?></label>
                   <select class="form-control custom-select" id="productType" name="product_type" required>
-                      <option value="0" selected disabled>Choice type</option>
+                      <option value="0" selected disabled><?=lang('input_select');?></option>
                       <?php foreach($list_type as $item): ?>
                           <option value="<?=$item->ID;?>"><?=$item->type_product;?></option>
                       <?php endforeach; ?>
                   </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Category select</label>
+    <label for="exampleFormControlSelect1"><?=lang('select_cat_product');?></label>
     <select class="form-control custom-select" id="category_id" name="category_id">
-      <option value="0" selected disabled>Choice category</option>
+      <option value="0" selected disabled><?=lang('input_select');?></option>
       <?php foreach($list_cat as $item): ?>
       <option value="<?=$item->ID;?>"><?=$item->name;?></option>
       <?php endforeach; ?>
     </select>
   </div>
   <div class="form-group">
-<label for="exampleInputEmail1">Short description of product</label>
+<label for="exampleInputEmail1"><?=lang('short_desc_product');?></label>
 <input type="text" class="form-control" name="short_description" id="short_description" required>
 <small id="emailHelp" class="form-text text-muted">Short text for description</small>
 </div>
   <div class="form-group">
-<label for="exampleInputEmail1">Full description of product</label>
+<label for="exampleInputEmail1"><?=lang('full_desc_product');?></label>
 <textarea class="form-control" name="full_description" id="full_description" rows="4"></textarea>
 <small id="emailHelp" class="form-text text-muted">Full text of description.</small>
 </div>
@@ -55,9 +55,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
   <div class="col-sm-5">
     <div class="form-group">
-    <label for="exampleInputEmail1">Slug</label>
+    <label for="exampleInputEmail1"><?=lang('slug');?></label>
     <input type="text" class="form-control" name="slug" id="product_slug" required>
-    <small id="emailHelp" class="form-text text-muted">This value use for url of product.</small>
+    <small id="emailHelp" class="form-text text-muted"><?=lang('slug_desc');?></small>
     </div>
     <div class="form-group">
     <label for="exampleInputEmail1">Price</label>
@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <div class="form-group">
       <label for="exampleInputEmail1">Add more images for product</label><br>
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal">Add images</button>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#uploadModal"><?=lang('btn_add_image');?></button>
     </div>
       <div class="form-group">
           <div class="col-12 border" id="uploadFilesList"></div>
@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <hr>
         <div class="col-sm-11 text-right pb-3 mb-4">
-          <button type="submit" class="btn btn-primary">Save new product</button>
+          <button type="submit" class="btn btn-primary"><?=lang('btn_new_product');?></button>
           </div>
                   </form>
       </div>

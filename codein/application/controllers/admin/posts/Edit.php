@@ -28,5 +28,17 @@ public function index(){
     echo "liST of POSTs";
 
 }
+
+public function add_post(){
+
+    $this->load->view('admin/posts/add_post');
+
+}
+
+public function edit_post($id){
+
+    $this->load->view('admin/posts/edit_post');
+
+}
 //END
 }

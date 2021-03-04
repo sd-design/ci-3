@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
           <div class="col-sm-4">
               <div class="card" style="width: 100%;">
-                  <img src="<?php echo base_url();?>assets/images/bg_categories.jpg" class="card-img-top" alt="Категории продукции">
+                  <img src="<?php echo base_url();?>assets/images/bg_categories.jpg" class="card-img-top" alt="<?=lang('category_title');?>">
                   <div class="card-body">
                       <h4 class="card-title"><?=lang('category_title');?></h4>
                       <p class="card-text"><?=lang('category_desc');?></p>
@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           <div class="col-sm-4">
               <div class="card" style="width: 100%;">
-                  <img src="<?php echo base_url();?>assets/images/bg_products.jpg" class="card-img-top" alt="Продукция">
+                  <img src="<?php echo base_url();?>assets/images/bg_products.jpg" class="card-img-top" alt="<?=lang('products_title');?>">
                   <div class="card-body">
                       <h4 class="card-title"><?=lang('products_title');?></h4>
                       <p class="card-text"><?=lang('products_desc');?></p>
@@ -35,11 +35,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           <div class="col-sm-4">
               <div class="card" style="width: 100%;">
-                  <img src="<?php echo base_url();?>assets/images/bg_orders.jpg" class="card-img-top" alt="Заказы">
+                  <img src="<?php echo base_url();?>assets/images/bg_orders.jpg" class="card-img-top" alt="<?=lang('orders_title');?>">
                   <div class="card-body">
                       <h4 class="card-title"><?=lang('orders_title');?></h4>
                       <p class="card-text"><?=lang('orders_desc');?></p>
                       <a href="<?php echo base_url();?>admin/orders/" class="btn btn-primary"><?=lang('list_orders');?></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="card" style="width: 100%;">
+                  <img src="<?php echo base_url();?>assets/images/bg_posts.jpg" class="card-img-top" alt="<?=lang('posts_title');?>">
+                  <div class="card-body">
+                      <h4 class="card-title"><?=lang('posts_title');?></h4>
+                      <p class="card-text"><?=lang('posts_desc');?></p>
+                      <a href="<?php echo base_url();?>admin/posts/edit" class="btn btn-primary"><?=lang('list_posts');?></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="card" style="width: 100%;">
+                  <img src="<?php echo base_url();?>assets/images/bg_emails.jpg" class="card-img-top" alt="<?=lang('emails_title');?>">
+                  <div class="card-body">
+                      <h4 class="card-title"><?=lang('emails_title');?></h4>
+                      <p class="card-text"><?=lang('emails_desc');?></p>
+                      <a href="<?php echo base_url();?>admin/emails/edit" class="btn btn-primary"><?=lang('list_emails');?></a>
+                      <a href="<?php echo base_url();?>admin/emails/upload_template" class="btn btn-secondary"><?=lang('btn_emails_template');?></a>
                   </div>
               </div>
           </div>
