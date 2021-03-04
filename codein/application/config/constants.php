@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+defined('SITE_NAME') OR define('SITE_NAME', 'Просто магазин');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace

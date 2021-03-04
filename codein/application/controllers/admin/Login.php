@@ -45,9 +45,9 @@ public function __construct(){
         }
       }
         else{
-          $response = array('response'=>false, 'error'=>'404');
+          $response = array('response'=>false, 'error'=>'401');
           $this->output
-                  ->set_status_header(200)
+                  ->set_status_header(401)
                   ->set_content_type('application/json', 'utf-8')
                   ->set_output(json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES))
                   ->_display();

@@ -1,16 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Edit extends CI_Controller {
+
 
     /**
-     * Adminpanel Dashboard
+     * Adminpanel Edititng posts (blog, news, pages)
      */
 
      public function __construct(){
                         parent::__construct();
                         $this->load->helper('form');
                         $this->load->model('admin/Admin', 'Admin');
+                        $this->load->model('admin/Posts_model', 'Posts');
                         $user = $this->session->username;
 
         if($this->Admin->check_auth($user) == true){
@@ -21,14 +23,10 @@ class Dashboard extends CI_Controller {
         }
                       }
 
+public function index(){
+    $data['listPosts'] = $this->Posts->get_posts();
+    echo "liST of POSTs";
 
-    public function index()
-    {
-        //$this->output->cache(5); //Кеширование Dashboard
-        $this->load->view('admin/dashboard');
-    }
-
-    public function logout(){
-      echo 'logout';
-    }
+}
+//END
 }

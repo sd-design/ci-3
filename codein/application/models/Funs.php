@@ -24,7 +24,7 @@ public function add_user()
 		'restore_key' => 'fkd25555&jlkf323'
 	);
 
-$query = $this->db->insert('sd_users', $data);
+$query = $this->db->insert('front_users', $data);
 
 $id_call = $this->db->query("SELECT LAST_INSERT_ID()");
 $answer = $id_call->result_array();

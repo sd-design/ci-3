@@ -2,8 +2,6 @@
 class Admin extends CI_Model {
   public function __construct(){
                      parent::__construct();
-                     $this->load->database();
-                     $this->load->library('session');
                      $this->load->helper('language');
                      $this->lang->load('admin');
   }

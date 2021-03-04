@@ -115,7 +115,15 @@ if(validationForm() == true){
                     window.location.replace('/admin/'+answer.url);
                 }
                 else { alert("Server: Incorrect Kundennummer or Passwort"); }
-            }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+        if(xhr.status==403) {
+            alert("<?=lang('error_login_403');?>"); 
+        }
+        if(xhr.status==401) {
+            alert("<?=lang('error_login_401');?>"); 
+        }
+      }
         });
       }
       else{
