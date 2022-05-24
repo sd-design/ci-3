@@ -25,3 +25,5 @@ application/logs/*
 /vendor/
 www/uploads/*
 tmp/*
+codein/application/vendor
+.idea
