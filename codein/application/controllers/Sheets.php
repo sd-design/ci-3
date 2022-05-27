@@ -41,4 +41,10 @@ class Sheets extends CI_Controller {
         $data = $this->sheet->fail_data();
         var_dump($data);
     }
+
+    public function token()
+    {
+        echo $this->security->get_csrf_hash();
+    }
+
 }

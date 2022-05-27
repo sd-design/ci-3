@@ -68,7 +68,7 @@ class Sheets_model extends CI_Model
             $phone = self::setValue('phone_');
             $email = self::setValue('email_');
             $dateFrom = self::setValue('dateFrom_');
-            $dateTo = self::setValue('dateFrom_');
+            $dateTo = self::setValue('dateTo_');
             //var_dump($nominations);exit;
             //Utm-params
             $insert_values =  [[
