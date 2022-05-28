@@ -31,15 +31,19 @@ class Sheets extends CI_Controller {
 
     public function read()
     {
-        $sheetId = "1iFGI3rVyVHxHHVdAC3-dNwtavHzw4QNOuBoLyvtOwNQ";
+        $spreadsheetId = "1iFGI3rVyVHxHHVdAC3-dNwtavHzw4QNOuBoLyvtOwNQ";
         $get_range = "patmos_members!A2:I";
-        $this->sheet->readSheet($sheetId, $get_range);
+        $this->sheet->readSheet($spreadsheetId, $get_range);
     }
 
     public function registration()
     {
-        $data = $this->sheet->fail_data();
-        var_dump($data);
+        // $data = $this->sheet->fail_data();
+        // var_dump($data);
+         $spreadsheetId = '1iFGI3rVyVHxHHVdAC3-dNwtavHzw4QNOuBoLyvtOwNQ';
+         $sheetID = "patmos_members";
+        $this->sheet->insertData($sheetID, $spreadsheetId);
+        
     }
 
     public function token()

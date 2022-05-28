@@ -20,7 +20,7 @@ class Events extends CI_Controller {
 
         $this->load->library('calendar', $prefs);
     }
-	public function index($year =2021)
+	public function index($year =2022)
 	{
         $data['switchCal'] = TRUE;
         $data['calendar'] = '';
